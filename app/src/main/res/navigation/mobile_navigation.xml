@@ -22,5 +22,5 @@
         android:id="@+id/nav_initiatives"
         android:name="com.progtech.opinionleaders.ui.initiatives.InitiativesFragment"
         android:label="@string/menu_initiatives"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_initiatives" />
 </navigation>

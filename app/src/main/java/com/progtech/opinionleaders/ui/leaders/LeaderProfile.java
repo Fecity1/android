@@ -5,9 +5,9 @@ public class LeaderProfile {
     private String surname;
     private int image;
 
-    public LeaderProfile(String name, String surname, int image){
+    public LeaderProfile(String name, String surname, int image) {
 
-        this.name=name;
+        this.name = name;
         this.surname = surname;
         this.image = image;
     }
@@ -24,8 +24,8 @@ public class LeaderProfile {
         return this.surname;
     }
 
-    public void setSurname(String company) {
-        this.surname = company;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public int getImage() {

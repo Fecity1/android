@@ -1,4 +1,4 @@
-package com.progtech.opinionleaders.ui.leaders;
+package com.progtech.opinionleaders.ui.initiatives;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -14,13 +14,13 @@ import com.progtech.opinionleaders.R;
 
 import java.util.List;
 
-public class LeaderProfileAdapter extends RecyclerView.Adapter<LeaderProfileAdapter.ViewHolder> {
+public class InitiativeInfoAdapter extends RecyclerView.Adapter<InitiativeInfoAdapter.ViewHolder> {
 
     private LayoutInflater inflater;
-    private List<LeaderProfile> leaderProfiles;
+    private List<InitiativeInfo> initiativeInfos;
 
-    LeaderProfileAdapter(Context context, List<LeaderProfile> leaderProfiles) {
-        this.leaderProfiles = leaderProfiles;
+    InitiativeInfoAdapter(Context context, List<InitiativeInfo> initiativeInfos) {
+        this.initiativeInfos = initiativeInfos;
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -33,25 +33,22 @@ public class LeaderProfileAdapter extends RecyclerView.Adapter<LeaderProfileAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        LeaderProfile leaderProfile = leaderProfiles.get(position);
-        holder.imageView.setImageResource(leaderProfile.getImage());
-        holder.nameView.setText(leaderProfile.getName());
-        holder.surnameView.setText(leaderProfile.getSurname());
+        InitiativeInfo initiativeInfo = initiativeInfos.get(position);
+        holder.titleView.setText(initiativeInfo.getTitle());
+        holder.textView.setText(initiativeInfo.getText());
     }
 
     @Override
     public int getItemCount() {
-        return leaderProfiles.size();
+        return initiativeInfos.size();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        final ImageView imageView;
-        final TextView nameView, surnameView;
+        final TextView titleView, textView;
         ViewHolder(View view){
             super(view);
-            imageView = view.findViewById(R.id.image);
-            nameView = view.findViewById(R.id.title);
-            surnameView = view.findViewById(R.id.text);
+            titleView = view.findViewById(R.id.title);
+            textView = view.findViewById(R.id.text);
         }
     }
 }

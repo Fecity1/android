@@ -10,5 +10,6 @@
     <string name="menu_profile">Профиль</string>
     <string name="menu_leaders">Лидеры</string>
     <string name="menu_initiatives">Инициативы</string>
+    <string name="image_leader">image leader</string>
 
 </resources>
