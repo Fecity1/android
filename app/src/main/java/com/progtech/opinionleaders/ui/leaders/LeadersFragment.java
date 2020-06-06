@@ -46,22 +46,23 @@ public class LeadersFragment extends Fragment {
         return root;
     }
 
-    private void setInitialData(){
+    private void setInitialData() {
 
-        leaderProfiles.add(new LeaderProfile ("Руслан", "Бабажанов", R.drawable.avatar_img,
+        leaderProfiles.add(new LeaderProfile ("Руслан", "Бабажанов",
+                "Темерович", R.drawable.avatar_img,
                 "Железногорск", "Участник Хаккатона", 5000));
-        leaderProfiles.add(new LeaderProfile ("Артём", "Посунько", R.drawable.leader_02,
+        leaderProfiles.add(new LeaderProfile ("Артём", "Посунько", "", R.drawable.leader_02,
                 "Екатеринбург", "Участник Хаккатона", 5000));
-        leaderProfiles.add(new LeaderProfile ("Ангелина", "Нестерова", R.drawable.leader_03,
+        leaderProfiles.add(new LeaderProfile ("Ангелина", "Нестерова", "", R.drawable.leader_03,
                 "Санкт-Петербург", "Участник Хаккатона", 5000));
-        leaderProfiles.add(new LeaderProfile ("Сергей", "Миронов", R.drawable.leader_04,
+        leaderProfiles.add(new LeaderProfile ("Сергей", "Миронов", "", R.drawable.leader_04,
                 "Железногорск", "Участник Хаккатона", 5000));
-        leaderProfiles.add(new LeaderProfile ("Андрей", "Иванов", R.drawable.leader_05,
+        leaderProfiles.add(new LeaderProfile ("Андрей", "Иванов", "", R.drawable.leader_05,
                 "Екатеринбург", "Участник Хаккатона", 5000));
 
-        leaderProfiles.add(new LeaderProfile ("Ilon", "Mask", R.drawable.ic_user,
+        leaderProfiles.add(new LeaderProfile ("Ilon", "Mask", "", R.drawable.ic_user,
                 "Сан Франциско", "Super Engineer", 4000));
-        leaderProfiles.add(new LeaderProfile ("German", "Gref", R.drawable.ic_user,
+        leaderProfiles.add(new LeaderProfile ("German", "Gref", "", R.drawable.ic_user,
                 "Москва", "Президент компании", 4000));
 
     }

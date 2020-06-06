@@ -3,15 +3,18 @@ package com.progtech.opinionleaders.ui.leaders;
 public class LeaderProfile {
     private String name;
     private String surname;
+    private String second_name;
     private int image;
     private String city;
     private String about;
     private Integer rating;
 
-    public LeaderProfile(String name, String surname, int image, String city, String about, Integer rating) {
+    public LeaderProfile(String name, String surname, String second_name, int image, String city,
+                         String about, Integer rating) {
 
         this.name = name;
         this.surname = surname;
+        this.second_name = second_name;
         this.image = image;
         this.city = city;
         this.about = about;
@@ -64,5 +67,13 @@ public class LeaderProfile {
 
     public void setRating(Integer rating) {
         this.rating = rating;
+    }
+
+    public String getSecondName() {
+        return second_name;
+    }
+
+    public void setSecondName(String second_name) {
+        this.second_name = second_name;
     }
 }

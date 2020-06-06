@@ -1,13 +1,17 @@
 package com.progtech.opinionleaders.ui.leaders;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.progtech.opinionleaders.R;
@@ -27,8 +31,30 @@ public class LeaderProfileAdapter extends RecyclerView.Adapter<LeaderProfileAdap
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.leaders_list_item, parent, false);
-        return new ViewHolder(view);
+        final View root = inflater.inflate(R.layout.leaders_list_item, parent, false);
+
+        final ViewHolder viewHolder = new ViewHolder(root);
+
+        root.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Bundle bundle = new Bundle();
+
+                int pos = viewHolder.getAdapterPosition();
+
+                bundle.putString("name", leaderProfiles.get(pos).getName());
+                bundle.putString("surname", leaderProfiles.get(pos).getSurname());
+                bundle.putString("second_name", leaderProfiles.get(pos).getSecondName());
+                bundle.putInt("image", leaderProfiles.get(pos).getImage());
+                bundle.putString("city", leaderProfiles.get(pos).getCity());
+                bundle.putString("about", leaderProfiles.get(pos).getAbout());
+                bundle.putInt("rating", leaderProfiles.get(pos).getRating());
+
+                Navigation.findNavController(view).navigate(R.id.leaderDetailFragment, bundle);
+            }
+        });
+        return viewHolder;
     }
 
     @Override

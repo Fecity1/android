@@ -16,11 +16,23 @@
         android:id="@+id/nav_leaders"
         android:name="com.progtech.opinionleaders.ui.leaders.LeadersFragment"
         android:label="@string/menu_leaders"
-        tools:layout="@layout/fragment_leaders" />
+        tools:layout="@layout/fragment_leaders" >
+        <action
+            android:id="@+id/action_nav_leaders_to_leaderDetailFragment"
+            app:destination="@id/leaderDetailFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_initiatives"
         android:name="com.progtech.opinionleaders.ui.initiatives.InitiativesFragment"
         android:label="@string/menu_initiatives"
         tools:layout="@layout/fragment_initiatives" />
+    <fragment
+        android:id="@+id/leaderDetailFragment"
+        android:name="com.progtech.opinionleaders.LeaderDetailFragment"
+        android:label="Описание"
+        tools:layout="@layout/leader_detail_fragment" />
 </navigation>
