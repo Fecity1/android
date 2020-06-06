@@ -83,6 +83,43 @@
         app:layout_constraintStart_toEndOf="@+id/detailImageView"
         app:layout_constraintTop_toBottomOf="@+id/detailNameView" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/icon_vk"
+        app:layout_constraintStart_toEndOf="@+id/detailImageView"
+        app:layout_constraintTop_toBottomOf="@+id/detailCityView" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/icon_telegram"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/icon_instagram"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/icon_facebook"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
     <TextView
         android:id="@+id/detailInfoView"
         android:layout_width="0dp"
@@ -122,9 +159,9 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="426dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,7 +173,160 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardElevation="2dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/inner_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView011"
+                        android:layout_width="32dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:src="@drawable/conference_call"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView012"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="653"
+                        android:textColor="@color/colorPrimary"
+                        card_view:layout_constraintStart_toEndOf="@+id/imageView011"
+                        card_view:layout_constraintTop_toTopOf="@+id/imageView011" />
+
+                    <TextView
+                        android:id="@+id/textView013"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:text="доверителей"
+                        android:textColor="@color/colorPrimary"
+                        card_view:layout_constraintStart_toEndOf="@+id/imageView011"
+                        card_view:layout_constraintTop_toBottomOf="@+id/textView012" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardElevation="2dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/inner_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView021"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="32dp"
+                        android:src="@drawable/bullish"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView022"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="53%"
+                        android:textColor="@color/colorPrimary"
+                        card_view:layout_constraintStart_toEndOf="@+id/imageView021"
+                        card_view:layout_constraintTop_toTopOf="@+id/imageView021" />
+
+                    <TextView
+                        android:id="@+id/textView023"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:text="голосований в пользу лидера"
+                        android:textColor="@color/colorPrimary"
+                        card_view:layout_constraintStart_toEndOf="@+id/imageView021"
+                        card_view:layout_constraintTop_toBottomOf="@+id/textView022" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardElevation="2dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/inner_layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView031"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="32dp"
+                        android:src="@drawable/bearish"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView032"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="321"
+                        android:textColor="@color/colorPrimary"
+                        card_view:layout_constraintStart_toEndOf="@+id/imageView031"
+                        card_view:layout_constraintTop_toTopOf="@+id/imageView031" />
+
+                    <TextView
+                        android:id="@+id/textView033"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:text="отозванных голосов"
+                        android:textColor="@color/colorPrimary"
+                        card_view:layout_constraintStart_toEndOf="@+id/imageView031"
+                        card_view:layout_constraintTop_toBottomOf="@+id/textView032" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -148,10 +338,40 @@
                 card_view:cardUseCompatPadding="true">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/inner_layout"
+                    android:id="@+id/inner_layout4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView041"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="32dp"
+                        android:src="@drawable/doughnut_chart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView042"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="280"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toEndOf="@+id/imageView041"
+                        app:layout_constraintTop_toTopOf="@+id/imageView041" />
+
+                    <TextView
+                        android:id="@+id/textView043"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:text="рецензий"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toEndOf="@+id/imageView041"
+                        app:layout_constraintTop_toBottomOf="@+id/textView042" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
