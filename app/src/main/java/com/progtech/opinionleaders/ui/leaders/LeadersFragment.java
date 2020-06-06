@@ -6,9 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -50,11 +48,21 @@ public class LeadersFragment extends Fragment {
 
     private void setInitialData(){
 
-        leaderProfiles.add(new LeaderProfile ("Иван", "Иванов", R.drawable.ic_user));
-        leaderProfiles.add(new LeaderProfile ("Пётр", "Петров", R.drawable.ic_user));
-        leaderProfiles.add(new LeaderProfile ("Василий", "Васильев", R.drawable.ic_user));
-        leaderProfiles.add(new LeaderProfile ("Леонид", "Леонидов", R.drawable.ic_user));
-        leaderProfiles.add(new LeaderProfile ("Ilon", "Mask", R.drawable.ic_user));
-        leaderProfiles.add(new LeaderProfile ("German", "Gref", R.drawable.ic_user));
+        leaderProfiles.add(new LeaderProfile ("Руслан", "Бабажанов", R.drawable.avatar_img,
+                "Железногорск", "Участник Хаккатона", 5000));
+        leaderProfiles.add(new LeaderProfile ("Артём", "Посунько", R.drawable.leader_02,
+                "Екатеринбург", "Участник Хаккатона", 5000));
+        leaderProfiles.add(new LeaderProfile ("Ангелина", "Нестерова", R.drawable.leader_03,
+                "Санкт-Петербург", "Участник Хаккатона", 5000));
+        leaderProfiles.add(new LeaderProfile ("Сергей", "Миронов", R.drawable.leader_04,
+                "Железногорск", "Участник Хаккатона", 5000));
+        leaderProfiles.add(new LeaderProfile ("Андрей", "Иванов", R.drawable.leader_05,
+                "Екатеринбург", "Участник Хаккатона", 5000));
+
+        leaderProfiles.add(new LeaderProfile ("Ilon", "Mask", R.drawable.ic_user,
+                "Сан Франциско", "Super Engineer", 4000));
+        leaderProfiles.add(new LeaderProfile ("German", "Gref", R.drawable.ic_user,
+                "Москва", "Президент компании", 4000));
+
     }
 }

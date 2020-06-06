@@ -37,6 +37,9 @@ public class LeaderProfileAdapter extends RecyclerView.Adapter<LeaderProfileAdap
         holder.imageView.setImageResource(leaderProfile.getImage());
         holder.nameView.setText(leaderProfile.getName());
         holder.surnameView.setText(leaderProfile.getSurname());
+        holder.cityView.setText("г. " + leaderProfile.getCity());
+        holder.aboutView.setText(leaderProfile.getAbout());
+        holder.ratingView.setText(String.format("Рейтинг: %d", leaderProfile.getRating()));
     }
 
     @Override
@@ -47,11 +50,16 @@ public class LeaderProfileAdapter extends RecyclerView.Adapter<LeaderProfileAdap
     static class ViewHolder extends RecyclerView.ViewHolder {
         final ImageView imageView;
         final TextView nameView, surnameView;
+        final TextView cityView, aboutView;
+        final TextView ratingView;
         ViewHolder(View view){
             super(view);
             imageView = view.findViewById(R.id.image);
-            nameView = view.findViewById(R.id.title);
-            surnameView = view.findViewById(R.id.text);
+            nameView = view.findViewById(R.id.nameView);
+            surnameView = view.findViewById(R.id.surnameView);
+            cityView = view.findViewById(R.id.cityView);
+            aboutView = view.findViewById(R.id.aboutView);
+            ratingView = view.findViewById(R.id.ratingView);
         }
     }
 }

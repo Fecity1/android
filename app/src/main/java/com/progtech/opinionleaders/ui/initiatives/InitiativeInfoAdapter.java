@@ -27,7 +27,7 @@ public class InitiativeInfoAdapter extends RecyclerView.Adapter<InitiativeInfoAd
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.leaders_list_item, parent, false);
+        View view = inflater.inflate(R.layout.initiative_list_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -47,8 +47,8 @@ public class InitiativeInfoAdapter extends RecyclerView.Adapter<InitiativeInfoAd
         final TextView titleView, textView;
         ViewHolder(View view){
             super(view);
-            titleView = view.findViewById(R.id.title);
-            textView = view.findViewById(R.id.text);
+            titleView = view.findViewById(R.id.titleView);
+            textView = view.findViewById(R.id.textView);
         }
     }
 }
