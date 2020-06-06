@@ -18,7 +18,7 @@ import java.util.List;
 public class LeadersFragment extends Fragment {
 
     private LeadersViewModel leadersViewModel;
-    List<LeaderProfile> leaderProfiles = new ArrayList<>();
+    List<LeaderProfile> leaderProfiles;
     RecyclerView recyclerView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -27,8 +27,12 @@ public class LeadersFragment extends Fragment {
                 ViewModelProviders.of(this).get(LeadersViewModel.class);
         View root = inflater.inflate(R.layout.fragment_leaders, container, false);
         //final TextView textView = root.findViewById(R.id.text_gallery);
-        setInitialData();
+
         recyclerView = root.findViewById(R.id.recyclerLeaders);
+
+        leaderProfiles = new ArrayList<>();
+        setInitialData();
+
         // создаем адаптер
         LeaderProfileAdapter adapter = new LeaderProfileAdapter(getContext(), leaderProfiles);
         // устанавливаем для списка адаптер
@@ -60,10 +64,10 @@ public class LeadersFragment extends Fragment {
         leaderProfiles.add(new LeaderProfile ("Андрей", "Иванов", "", R.drawable.leader_05,
                 "Екатеринбург", "Участник Хаккатона", 5000));
 
-        leaderProfiles.add(new LeaderProfile ("Ilon", "Mask", "", R.drawable.ic_user,
-                "Сан Франциско", "Super Engineer", 4000));
-        leaderProfiles.add(new LeaderProfile ("German", "Gref", "", R.drawable.ic_user,
-                "Москва", "Президент компании", 4000));
+        leaderProfiles.add(new LeaderProfile ("Илон", "Маск", "", R.drawable.leader_06,
+                "Марс", "Founder, CEO", 4000));
+        leaderProfiles.add(new LeaderProfile ("Герман", "Греф", "Оскарович", R.drawable.leader_07,
+                "Москва", "Президент Сбербанка России", 4000));
 
     }
 }

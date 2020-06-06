@@ -33,6 +33,6 @@
     <fragment
         android:id="@+id/leaderDetailFragment"
         android:name="com.progtech.opinionleaders.LeaderDetailFragment"
-        android:label="Описание"
+        android:label="Карточка лидера"
         tools:layout="@layout/leader_detail_fragment" />
 </navigation>

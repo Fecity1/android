@@ -17,8 +17,7 @@
         card_view:cardBackgroundColor="@android:color/white"
         card_view:cardCornerRadius="5dp"
         card_view:cardElevation="2dp"
-        card_view:cardUseCompatPadding="true"
-        >
+        card_view:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/inner_layout"
